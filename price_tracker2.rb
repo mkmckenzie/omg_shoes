@@ -36,6 +36,11 @@ class Item
 		if page.has_content?(@price) === false
 			return "Cannot find that price"
 		end
+
+	#these are hardcoded values for the one page I was looking at.
+	#the intention here is to scan the page for the price and pick up the id/class of the
+	#elements that surround the price, so that they can be referenced later
+		
 	thisprice = find("span.selected-color-price").text
 	thisitem = find("div.product-detail-sku header h1.notranslate
 	").text
